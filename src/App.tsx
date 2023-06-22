@@ -1,5 +1,6 @@
 import "./App.css"
 import CicloVidaClase from "./components/CicloVidaClase"
+import CicloVidaFuncional from "./components/CicloVidaFuncional"
 import { useState } from "react"
 
 function App() {
@@ -10,8 +11,10 @@ function App() {
   }
   return (
     <div>
-      {(contador < 10 || contador > 12) ? <CicloVidaClase contador={contador}/> : null}
-      <button onClick={incrementarContador}>Incrementa</button>      
+      {/*(contador < 10 || contador > 12) ? <CicloVidaClase contador={contador}/> : null*/}
+      <button onClick={incrementarContador}>Incrementa</button>   
+
+      {(contador < 10 || contador > 12) ? <CicloVidaFuncional contador={contador} /> : null}
     </div>
   )
 }
