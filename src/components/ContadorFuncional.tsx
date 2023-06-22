@@ -8,7 +8,7 @@ const ContadorFuncional = ({valorInicial}: IProps) => {
 
   const incrementarContador = () => {
     //setValorContador(getValorContador + 1)    
-    setValorContador(valorAnterior => valorAnterior +1)    
+    setValorContador(valorAnterior => valorAnterior +2)    
   }
 
   return (

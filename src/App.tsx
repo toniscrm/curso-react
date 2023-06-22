@@ -4,10 +4,14 @@ import { useState } from "react"
 
 function App() {
   const [contador, setContador] = useState(0)
+
+  const incrementarContador = () => {
+    setContador(contador => contador +1) 
+  }
   return (
     <div>
-      <CicloVidaClase contador={1} />
-      <button onClick={() => setContador(v => v + 1)}>Incrementa</button>
+      {(contador < 10 || contador > 12) ? <CicloVidaClase contador={contador}/> : null}
+      <button onClick={incrementarContador}>Incrementa</button>      
     </div>
   )
 }
