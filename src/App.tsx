@@ -1,12 +1,13 @@
 import "./App.css"
-import ContadorFuncional from "./components/ContadorFuncional"
-import ContadorClase from "./components/ContadorClase"
+import CicloVidaClase from "./components/CicloVidaClase"
+import { useState } from "react"
 
 function App() {
+  const [contador, setContador] = useState(0)
   return (
     <div>
-      <ContadorFuncional valorInicial={5}/>
-      <ContadorClase valorInicial={8}/>
+      <CicloVidaClase contador={1} />
+      <button onClick={() => setContador(v => v + 1)}>Incrementa</button>
     </div>
   )
 }
