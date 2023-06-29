@@ -1,9 +1,11 @@
 import "./App.css"
+import Formulario from "./components/Formulario"
 
 function App() {
   return (
     <>
-    <button>Click</button>
+    <Formulario></Formulario>
+    <button onClick={() => alert("Has hecho click en react")}>Click</button>
     </>
   )
 }
