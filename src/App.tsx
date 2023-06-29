@@ -1,9 +1,8 @@
 import "./App.css"
-import { FormularioClasico } from "./views"
 function App() {
     return (
         <>
-            <FormularioClasico />
+            <h1>App</h1>
         </>
     )
 }
