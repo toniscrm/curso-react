@@ -8,6 +8,7 @@ const Dashboard = () => {
                 <Link to="/alumnos">Alumnos</Link>
                 <Link to="/main">Main</Link>
                 <Link to="/protegida">PROHIBIDO</Link>
+                <Link to="/rickmorty">Rick</Link>
             </nav>
             <Outlet />
         </div>

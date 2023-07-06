@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouteObject, Navigate } from "react-router-dom"
 import App from "../App"
-import { Alumnos } from "../views"
+import { Alumnos, RickMortyAPI } from "../views"
 import DetalleAlumno from "../views/Alumnos/DetalleAlumno"
 import Dashboard from "../layouts/Dashboard"
 
@@ -16,7 +16,7 @@ const protectRoute = (element: JSX.Element): JSX.Element => {
     return <Navigate to="/notauthenticated" />
 }
 
-const routes: RouteObject[] = [
+export const routes: RouteObject[] = [
     {
         path: "/",
         element: <Dashboard />,
@@ -26,13 +26,17 @@ const routes: RouteObject[] = [
                 element: <App />
             },
             {
+                path: "rickmorty",
+                element: <RickMortyAPI />
+            },
+            {
                 path: "*",
                 element: <h1>404 not found</h1>,
             },
             {
                 path: "alumnos",
-                // element: <Alumnos />,
-                Component: Alumnos,
+                element: <Alumnos />,
+                // lazy: () => import("../views/Alumnos/Alumnos.tsx"),
             },
             {
                 path: "alumnos/:alumnoId",
